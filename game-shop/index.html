@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ігри для PlayStation 5 — PixelPort</title>
+  <meta name="description" content="Купити ігри для PlayStation 5 з доставкою по Україні. Нові релізи, передзамовлення, вживані диски.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Верхня інфо-смуга -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>🚚 Безкоштовна доставка від 2000 ₴</span>
+      <nav class="topbar__links">
+        <a href="#">Доставка і оплата</a>
+        <a href="#">Trade-in</a>
+        <a href="#">Контакти</a>
+        <a href="tel:+380000000000" class="topbar__phone">+38 (000) 000-00-00</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="PixelPort — на головну">
+        <span class="logo__mark">P</span>
+        <span class="logo__text">Pixel<b>Port</b></span>
+      </a>
+
+      <button class="btn btn--catalog" id="catalogBtn" aria-expanded="false" aria-controls="megaMenu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        Каталог
+      </button>
+
+      <form class="search" role="search" onsubmit="return false">
+        <input type="search" id="searchInput" placeholder="Пошук ігор, консолей, аксесуарів…" aria-label="Пошук">
+        <button type="submit" aria-label="Шукати">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+      </form>
+
+      <div class="header__actions">
+        <button class="icon-btn" aria-label="Обране" id="favBtn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-9.5-9.3C1 8 3.4 4 7.3 4c2 0 3.6 1.1 4.7 2.6C13.1 5.1 14.7 4 16.7 4 20.6 4 23 8 21.5 11.7 19.5 16.4 12 21 12 21z"/></svg>
+          <span class="badge" id="favCount">0</span>
+        </button>
+        <button class="icon-btn" aria-label="Кошик" id="cartBtn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Мега-меню -->
+    <div class="mega" id="megaMenu" hidden>
+      <div class="container mega__grid">
+        <div><h4>PlayStation 5</h4><a href="#">Ігри</a><a href="#">Консолі</a><a href="#">Геймпади</a><a href="#">Аксесуари</a></div>
+        <div><h4>PlayStation 4</h4><a href="#">Ігри</a><a href="#">Консолі</a><a href="#">Аксесуари</a></div>
+        <div><h4>Nintendo Switch</h4><a href="#">Ігри</a><a href="#">Консолі</a><a href="#">Аксесуари</a></div>
+        <div><h4>Xbox Series</h4><a href="#">Ігри</a><a href="#">Консолі</a><a href="#">Геймпади</a></div>
+        <div><h4>Інше</h4><a href="#">Вживані ігри</a><a href="#">Подарункові картки</a><a href="#">Мерч</a></div>
+      </div>
+    </div>
+
+    <nav class="platforms">
+      <div class="container platforms__inner">
+        <a href="#" class="is-active">PlayStation 5</a>
+        <a href="#">PlayStation 4</a>
+        <a href="#">Nintendo Switch</a>
+        <a href="#">Xbox Series</a>
+        <a href="#">VR</a>
+        <a href="#">Вживані</a>
+        <a href="#" class="platforms__sale">% Розпродаж</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Хлібні крихти -->
+    <nav class="breadcrumbs" aria-label="Навігація">
+      <a href="#">Головна</a><span>/</span><a href="#">PlayStation 5</a><span>/</span><span aria-current="page">Ігри</span>
+    </nav>
+
+    <!-- Банер категорії -->
+    <section class="hero">
+      <div class="hero__text">
+        <span class="hero__eyebrow">PlayStation 5</span>
+        <h1>Ігри для PS5</h1>
+        <p>Нові релізи, передзамовлення та перевірені вживані диски. Відправка в день замовлення.</p>
+      </div>
+      <div class="hero__chips" id="quickChips">
+        <button class="chip is-active" data-quick="all">Усі</button>
+        <button class="chip" data-quick="new">Новинки</button>
+        <button class="chip" data-quick="sale">Знижки</button>
+        <button class="chip" data-quick="preorder">Передзамовлення</button>
+        <button class="chip" data-quick="used">Вживані</button>
+      </div>
+    </section>
+
+    <div class="catalog">
+      <!-- Фільтри -->
+      <aside class="filters" id="filters" aria-label="Фільтри">
+        <div class="filters__head">
+          <h2>Фільтри</h2>
+          <button class="filters__close" id="filtersClose" aria-label="Закрити">✕</button>
+        </div>
+
+        <details class="f-group" open>
+          <summary>Ціна, ₴</summary>
+          <div class="price-range">
+            <input type="number" id="priceMin" placeholder="від" min="0" inputmode="numeric">
+            <span>—</span>
+            <input type="number" id="priceMax" placeholder="до" min="0" inputmode="numeric">
+          </div>
+        </details>
+
+        <details class="f-group" open>
+          <summary>Наявність</summary>
+          <label class="check"><input type="checkbox" name="stock" value="in"><span>В наявності</span></label>
+          <label class="check"><input type="checkbox" name="stock" value="preorder"><span>Передзамовлення</span></label>
+        </details>
+
+        <details class="f-group" open>
+          <summary>Стан</summary>
+          <label class="check"><input type="checkbox" name="condition" value="new"><span>Новий</span></label>
+          <label class="check"><input type="checkbox" name="condition" value="used"><span>Вживаний</span></label>
+        </details>
+
+        <details class="f-group" open>
+          <summary>Жанр</summary>
+          <div id="genreList"></div>
+        </details>
+
+        <details class="f-group">
+          <summary>Мова</summary>
+          <label class="check"><input type="checkbox" name="lang" value="ua"><span>Українська</span></label>
+          <label class="check"><input type="checkbox" name="lang" value="en"><span>Англійська</span></label>
+        </details>
+
+        <details class="f-group">
+          <summary>Вікове обмеження</summary>
+          <div id="ageList"></div>
+        </details>
+
+        <div class="filters__foot">
+          <button class="btn btn--ghost" id="resetFilters">Скинути</button>
+          <button class="btn btn--primary filters__apply" id="applyFilters">Показати</button>
+        </div>
+      </aside>
+      <div class="filters-backdrop" id="filtersBackdrop"></div>
+
+      <!-- Список товарів -->
+      <section class="products">
+        <div class="toolbar">
+          <button class="btn btn--ghost toolbar__filters" id="filtersOpen">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+            Фільтри
+          </button>
+          <p class="toolbar__count" id="resultCount">—</p>
+          <label class="sort">
+            <span>Сортувати:</span>
+            <select id="sortSelect">
+              <option value="popular">За популярністю</option>
+              <option value="new">Спочатку нові</option>
+              <option value="cheap">Від дешевих</option>
+              <option value="expensive">Від дорогих</option>
+              <option value="discount">За знижкою</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="active-filters" id="activeFilters"></div>
+
+        <div class="grid" id="productGrid" aria-live="polite"></div>
+
+        <div class="empty" id="emptyState" hidden>
+          <p>😕 За вашим запитом нічого не знайдено.</p>
+          <button class="btn btn--primary" id="emptyReset">Скинути фільтри</button>
+        </div>
+
+        <div class="more">
+          <button class="btn btn--ghost" id="loadMore">Показати ще</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- SEO-текст -->
+    <section class="seo">
+      <h2>Купити ігри для PlayStation 5 в Україні</h2>
+      <p>У каталозі PixelPort — ігри для PS5 на дисках: нові та вживані, з українською локалізацією та без. Ми перевіряємо кожен вживаний диск, даємо гарантію 14 днів і приймаємо ваші ігри в trade-in. Доставка Новою поштою по всій Україні, самовивіз з магазину.</p>
+    </section>
+
+    <!-- Переваги -->
+    <section class="perks">
+      <div class="perk"><b>🚀 Відправка сьогодні</b><span>при замовленні до 16:00</span></div>
+      <div class="perk"><b>🔁 Trade-in</b><span>обмін старих ігор на нові</span></div>
+      <div class="perk"><b>🛡️ Гарантія</b><span>14 днів на вживані диски</span></div>
+      <div class="perk"><b>💳 Оплата частинами</b><span>до 6 платежів без переплат</span></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#" class="logo logo--footer"><span class="logo__mark">P</span><span class="logo__text">Pixel<b>Port</b></span></a>
+        <p class="footer__muted">Магазин відеоігор і консолей. Працюємо щодня з 10:00 до 20:00.</p>
+      </div>
+      <div><h4>Покупцям</h4><a href="#">Доставка і оплата</a><a href="#">Повернення</a><a href="#">Гарантія</a><a href="#">Trade-in</a></div>
+      <div><h4>Каталог</h4><a href="#">PlayStation 5</a><a href="#">PlayStation 4</a><a href="#">Nintendo Switch</a><a href="#">Xbox</a></div>
+      <div><h4>Контакти</h4><a href="tel:+380000000000">+38 (000) 000-00-00</a><a href="mailto:hello@example.com">hello@example.com</a><span class="footer__muted">м. Київ, вул. Прикладна, 1</span></div>
+    </div>
+    <div class="container footer__bottom">© <span id="year"></span> PixelPort. Усі торгові марки належать їхнім власникам.</div>
+  </footer>
+
+  <!-- Кошик -->
+  <div class="drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="drawer" id="cartDrawer" aria-label="Кошик" aria-hidden="true">
+    <div class="drawer__head">
+      <h3>Кошик</h3>
+      <button class="icon-btn" id="cartClose" aria-label="Закрити">✕</button>
+    </div>
+    <div class="drawer__body" id="cartItems"></div>
+    <div class="drawer__foot">
+      <div class="drawer__total"><span>Разом</span><b id="cartTotal">0 ₴</b></div>
+      <button class="btn btn--primary btn--block" id="checkoutBtn">Оформити замовлення</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
